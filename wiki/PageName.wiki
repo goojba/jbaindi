@@ -1,11 +1,23 @@
 #summary One-sentence summary of this page.
 
-= Jabaco in the details =
+= Commandline Options =
 
-Some Jabaco-details on a central position.
+As comment at [http://www.jabaco.org/board/463-new-version/thread1.html http://www.jabaco.org/board/463-new-version/thread1.html] the undocumented Commandline Options for Jabaco 1.5.2:
 
-- [CommandlineOptions]
 
-- [GUI-CopyPaste]
+{{{
+Jabaco.exe [-projectpath | -d | -log | -jabacoframework | -javaframework]
+  -projectpath : The name of the main project file. It can be either
+          a .jba or .jsrc file
+  -d : The directory where the binary .class files will be created
+  -log : The directory where the logfile "build.log" will be created.
+          If it is not set, then the logfile will be in the directory which
+          was set with the  "-d" option
+  -jabacoframework : Jar-Archive of the Jabaco Framework.
+          If it is not set, it is Jabaco.jar in the Jabaco-directory.
+  -javaframework : Jar-Archive of the Java Framework.
+          If it is not set, it is the default rt.jar in the Java-directory.
+}}}
 
-- [ReservedWords]
+To run _not_ the IDE, it is needed that "-projectpath" and "-d" are set.
+The other options can also be used for the IDE. If you want to use an other Jabaco Framework file  you can set it with "-jabacoframework" and the IDE will use it.
